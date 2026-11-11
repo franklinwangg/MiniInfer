@@ -1,0 +1,183 @@
+{
+  "timestamp_utc": "2026-11-11T19:27:18.104894+00:00",
+  "model": "Qwen/Qwen2.5-0.5B",
+  "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "dtype": "torch.float32",
+  "torch_version": "2.14.0+cu126",
+  "transformers_version": "4.57.6",
+  "cuda_version": "12.6",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "cpu_threads": 8,
+  "warmup_runs_per_case": 1,
+  "measured_runs_per_case": 3,
+  "workload": "Single request, greedy decoding, fixed output length; EOS ignored. Prompt is repeated tokenized text truncated to the requested length.",
+  "timing": "Prefill includes prompt forward pass and first token selection. Decode includes remaining cached forward passes and token selections. Model loading, tokenization, and final token concatenation are excluded. CUDA is synchronized at phase boundaries.",
+  "cases": [
+    {
+      "prompt_tokens": 32,
+      "prompt_token_ids_sha256": "7b140f59a59ca43fc3d78fb7c7ada5ea78a4e1bee6de5a0d7940321ca050bdaa",
+      "output_tokens": 32,
+      "runs": [
+        {
+          "prefill_seconds": 0.04367649999949208,
+          "decode_seconds": 1.1689771000001201,
+          "total_seconds": 1.2126535999996122,
+          "decode_tokens": 31,
+          "decode_tokens_per_second": 26.518911277215622,
+          "overall_tokens_per_second": 26.388409682707604,
+          "peak_cuda_allocated_bytes": 2007034880
+        },
+        {
+          "prefill_seconds": 0.040159500000299886,
+          "decode_seconds": 1.1533627999997407,
+          "total_seconds": 1.1935223000000406,
+          "decode_tokens": 31,
+          "decode_tokens_per_second": 26.877926009064076,
+          "overall_tokens_per_second": 26.811396820988524,
+          "peak_cuda_allocated_bytes": 2007035392
+        },
+        {
+          "prefill_seconds": 0.04461099999934959,
+          "decode_seconds": 1.1676688000006834,
+          "total_seconds": 1.212279800000033,
+          "decode_tokens": 31,
+          "decode_tokens_per_second": 26.548624061875984,
+          "overall_tokens_per_second": 26.39654640785001,
+          "peak_cuda_allocated_bytes": 2007035392
+        }
+      ],
+      "median": {
+        "prefill_seconds": 0.04367649999949208,
+        "decode_seconds": 1.1676688000006834,
+        "total_seconds": 1.212279800000033,
+        "decode_tokens_per_second": 26.548624061875984,
+        "overall_tokens_per_second": 26.39654640785001
+      }
+    },
+    {
+      "prompt_tokens": 32,
+      "prompt_token_ids_sha256": "7b140f59a59ca43fc3d78fb7c7ada5ea78a4e1bee6de5a0d7940321ca050bdaa",
+      "output_tokens": 128,
+      "runs": [
+        {
+          "prefill_seconds": 0.043525499999304884,
+          "decode_seconds": 5.016497100000379,
+          "total_seconds": 5.060022599999684,
+          "decode_tokens": 127,
+          "decode_tokens_per_second": 25.316470331457065,
+          "overall_tokens_per_second": 25.296329704141638,
+          "peak_cuda_allocated_bytes": 2007035392
+        },
+        {
+          "prefill_seconds": 0.04679550000037125,
+          "decode_seconds": 4.881417599999622,
+          "total_seconds": 4.928213099999994,
+          "decode_tokens": 127,
+          "decode_tokens_per_second": 26.017032429270103,
+          "overall_tokens_per_second": 25.972902835715477,
+          "peak_cuda_allocated_bytes": 2007035904
+        },
+        {
+          "prefill_seconds": 0.04415850000077626,
+          "decode_seconds": 5.365844999999354,
+          "total_seconds": 5.41000350000013,
+          "decode_tokens": 127,
+          "decode_tokens_per_second": 23.66822001008514,
+          "overall_tokens_per_second": 23.65987378751177,
+          "peak_cuda_allocated_bytes": 2007035904
+        }
+      ],
+      "median": {
+        "prefill_seconds": 0.04415850000077626,
+        "decode_seconds": 5.016497100000379,
+        "total_seconds": 5.060022599999684,
+        "decode_tokens_per_second": 25.316470331457065,
+        "overall_tokens_per_second": 25.296329704141638
+      }
+    },
+    {
+      "prompt_tokens": 256,
+      "prompt_token_ids_sha256": "21377646373a774cb87d8407d048c43a6ed748d9c7e6936e194118cf9576c7ac",
+      "output_tokens": 32,
+      "runs": [
+        {
+          "prefill_seconds": 0.10443099999974947,
+          "decode_seconds": 1.2846804999999222,
+          "total_seconds": 1.3891114999996717,
+          "decode_tokens": 31,
+          "decode_tokens_per_second": 24.130513384457753,
+          "overall_tokens_per_second": 23.036307740600783,
+          "peak_cuda_allocated_bytes": 2155460608
+        },
+        {
+          "prefill_seconds": 0.10811029999968014,
+          "decode_seconds": 1.3404603999997562,
+          "total_seconds": 1.4485706999994363,
+          "decode_tokens": 31,
+          "decode_tokens_per_second": 23.12638254737375,
+          "overall_tokens_per_second": 22.09074089377374,
+          "peak_cuda_allocated_bytes": 2155460096
+        },
+        {
+          "prefill_seconds": 0.10419140000067273,
+          "decode_seconds": 1.266577899999902,
+          "total_seconds": 1.3707693000005747,
+          "decode_tokens": 31,
+          "decode_tokens_per_second": 24.475399420756037,
+          "overall_tokens_per_second": 23.34455549886227,
+          "peak_cuda_allocated_bytes": 2155460096
+        }
+      ],
+      "median": {
+        "prefill_seconds": 0.10443099999974947,
+        "decode_seconds": 1.2846804999999222,
+        "total_seconds": 1.3891114999996717,
+        "decode_tokens_per_second": 24.130513384457753,
+        "overall_tokens_per_second": 23.036307740600783
+      }
+    },
+    {
+      "prompt_tokens": 256,
+      "prompt_token_ids_sha256": "21377646373a774cb87d8407d048c43a6ed748d9c7e6936e194118cf9576c7ac",
+      "output_tokens": 128,
+      "runs": [
+        {
+          "prefill_seconds": 0.10398759999952745,
+          "decode_seconds": 5.083988999999747,
+          "total_seconds": 5.187976599999274,
+          "decode_tokens": 127,
+          "decode_tokens_per_second": 24.980384497292643,
+          "overall_tokens_per_second": 24.672432022923523,
+          "peak_cuda_allocated_bytes": 2155460096
+        },
+        {
+          "prefill_seconds": 0.10949429999982385,
+          "decode_seconds": 5.124559500000032,
+          "total_seconds": 5.234053799999856,
+          "decode_tokens": 127,
+          "decode_tokens_per_second": 24.782617901109198,
+          "overall_tokens_per_second": 24.455232003920848,
+          "peak_cuda_allocated_bytes": 2155460608
+        },
+        {
+          "prefill_seconds": 0.10427009999966685,
+          "decode_seconds": 5.062530300000617,
+          "total_seconds": 5.166800400000284,
+          "decode_tokens": 127,
+          "decode_tokens_per_second": 25.086269607114158,
+          "overall_tokens_per_second": 24.773552312954255,
+          "peak_cuda_allocated_bytes": 2155460608
+        }
+      ],
+      "median": {
+        "prefill_seconds": 0.10427009999966685,
+        "decode_seconds": 5.083988999999747,
+        "total_seconds": 5.187976599999274,
+        "decode_tokens_per_second": 24.980384497292643,
+        "overall_tokens_per_second": 24.672432022923523
+      }
+    }
+  ]
+}
